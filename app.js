@@ -2,6 +2,7 @@ const url = "http://universities.hipolabs.com/search?name=";
 const btn = document.querySelector("button");
 
  
+ 
 btn.addEventListener("click", async ()=> {
     const country = document.querySelector("input").value;
     const collegeArr = await getCollege(country);
@@ -25,7 +26,7 @@ async function getCollege(country) {
     const res = await axios.get(url + country);
     return res.data;
    }catch(e){
-     return e;
+     alert("something wents wrong", e)
    };
 };
 
