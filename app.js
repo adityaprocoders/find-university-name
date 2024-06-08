@@ -26,7 +26,7 @@ async function getCollege(country) {
     const res = await axios.get(url + country);
     return res.data;
    }catch(e){
-     alert("something wents wrong", e)
+     alert("something wents wrong"+ e)
    };
 };
 
